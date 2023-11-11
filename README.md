@@ -32,3 +32,28 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## Clerk
+
+Refer to documentation on https://clerk.com/ to set up the "sign-in" and "sign-up" pages.
+
+Also included a user profile button.
+
+## Prisma and Planetscale (DB)
+
+Install prisma: ```npm i -D prisma``` (done).
+
+Initialise prisma: ```npx prisma init``` (done).
+This will add a `prisma` folder and added a dummy variable to `.env`.
+
+After setting up planetscale, copy `.env` and `schema.prisma` values from planetscale to your application. 
+
+Execute the commands below each time schema is modified:
+1. Add schema to `node_modules`:
+
+   ```npx prisma generate```
+
+2. Push to DB
+   
+   ```npx prisma db push```
